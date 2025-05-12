@@ -28,18 +28,29 @@
    - 보행자: 높이 120px 이상
 
 ## 결과 예시
-- 차선 이탈 시 "Lane departure!" 경고 메시지 표시
+### 차선 이탈 시 "Lane departure!" 경고 메시지 표시
 <img src="src/lanedeparture.png" width="800">
-- 전방 차량 출발 시 "Start Moving!" 알림 메시지 표시
+
+### 전방 차량 출발 시 "Start Moving!" 알림 메시지 표시
 <img src="src/startmoving.png" width="800">
-- 보행자/차량 근접 시 "Human/Car detected nearby!" 경고 메시지 표시
+
+### 보행자/차량 근접 시 "Human/Car detected nearby!" 경고 메시지 표시
 <img src="src/humandetect.png" width="800">
 <img src="src/cardetect.png" width="800">
 
 ## 프로젝트 구조
 ```
 VehicleFeatures/
-└── main.cpp          # 메인 소스 코드
+├── main.cpp          # 메인 소스 코드
+├── YOLO/             # YOLO 모델 파일
+│   ├── yolov4-tiny.cfg
+│   ├── yolov4-tiny.weights
+│   └── coco.names
+└── src/              # 테스트 사진 및 기타 리소스
+    ├── lanedeparture.png
+    ├── startmoving.png
+    ├── humandetect.png
+    └── cardetect.png
 ```
 
 ## 설치 및 진행
