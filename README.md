@@ -29,12 +29,12 @@
 
 ## 결과 예시
 - 차선 이탈 시 "Lane departure!" 경고 메시지 표시
-<img src="src/lanedeparture.png.png.png" width="800">
+<img src="src/lanedeparture.png" width="800">
 - 전방 차량 출발 시 "Start Moving!" 알림 메시지 표시
 <img src="src/startmoving.png" width="800">
 - 보행자/차량 근접 시 "Human/Car detected nearby!" 경고 메시지 표시
-<img src="src/humandetect.png.png" width="800">
-<img src="src/cardetect.png.png.png" width="800">
+<img src="src/humandetect.png" width="800">
+<img src="src/cardetect.png" width="800">
 
 ## 프로젝트 구조
 ```
