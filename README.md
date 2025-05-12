@@ -7,7 +7,7 @@
 
 ## 기술 스택
 - OpenCV 4.x
-- YOLO v2-tiny
+- YOLO v4-tiny
 - C++
 
 ## 핵심 알고리즘
@@ -29,8 +29,12 @@
 
 ## 결과 예시
 - 차선 이탈 시 "Lane departure!" 경고 메시지 표시
+<img src="src/lanedeparture.png.png.png" width="800">
 - 전방 차량 출발 시 "Start Moving!" 알림 메시지 표시
+<img src="src/startmoving.png" width="800">
 - 보행자/차량 근접 시 "Human/Car detected nearby!" 경고 메시지 표시
+<img src="src/humandetect.png.png" width="800">
+<img src="src/cardetect.png.png.png" width="800">
 
 ## 프로젝트 구조
 ```
@@ -38,19 +42,18 @@ VehicleFeatures/
 └── main.cpp          # 메인 소스 코드
 ```
 
-## 설치 및 실행
-1. 필수 라이브러리 설치
+## 설치 및 진행
+1. OpenCV 설치
    ```bash
-   # OpenCV 설치
-   sudo apt-get install libopencv-dev
-   
-   # YOLO 가중치 및 설정 파일 다운로드
-   wget https://pjreddie.com/media/files/yolov2-tiny.weights
-   wget https://raw.githubusercontent.com/pjreddie/darknet/master/cfg/yolov2-tiny.cfg
+   sudo apt update && sudo apt install -y libopencv-dev
    ```
-
-2. 컴파일 및 실행
+2. YOLOv4-tiny 모델 다운로드
    ```bash
-   g++ main.cpp -o vehicle_features `pkg-config --cflags --libs opencv4`
-   ./vehicle_features
+   wget https://raw.githubusercontent.com/AlexeyAB/darknet/master/cfg/yolov4-tiny.cfg -O YOLO/yolov4-tiny.cfg
+   wget https://github.com/AlexeyAB/darknet/releases/download/darknet_yolo_v4_pre/yolov4-tiny.weights -O YOLO/yolov4-tiny.weights
+   ```
+3. 컴파일 및 실행
+   ```bash
+   g++ main.cpp -o main `pkg-config --cflags --libs opencv4`
+   ./main
    ```
